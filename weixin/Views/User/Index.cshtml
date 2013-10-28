@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="clearfix main">
+    <div class="aside">
+    </div>
+    <div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">平台公告</h3>
+            </div>
+            <div class="pbody">
+                <div class="pbox">
+                    <div class="clearfix box-userinfo">
+                        <div class="clearfix">
+                            <div class="left">
+                                <ul class="info">
+                                    <li>暂无通告</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">相关信息</h3>
+            </div>
+            <div class="pbody">
+                <div class="pbox">
+                    <div class="clearfix box-userinfo">
+                        <div class="clearfix">
+                            <div class="left">
+                                <ul class="info">
+                                    <li>
+                                     
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="floatright finance">
+                                <div class="floatleft balance">
+                                    账户余额：<strong class="larger2 orange">0.00</strong> 金币
+                           
+                                </div>
+                                <div class="floatright recharge">
+                                    <a href="http://www.weixiaoxin.com/Pay">充 值</a>
+                                </div>
+                                <div class="clear clearfix detail">
+                                    <span>已消费：<span class="orange"><a title="点击查看消费记录" href="http://www.weixiaoxin.com/Credit/paylists/">60.00</a></span> 金币<!-- [ <a href="">兑换</a> ] --></span>&nbsp;&nbsp;
+							
+                                    <span>拥有：<span class="orange"><a title="点击查看积分记录" href="http://www.weixiaoxin.com/Credit/inlists/">50</a></span>积分<!-- &nbsp;&nbsp;[ <a href="">兑换</a> ] --></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">所有微信公众号</h3>
+
+            </div>
+            <div class="pbody">
+                <style>
+                    .photos {
+                        width: 45px;
+                        height: 45px;
+                        display: inline-block;
+                        background-color: #fff;
+                        border-radius: 30px;
+                        padding: 5px;
+                    }
+
+                        .photos img {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 30px;
+                        }
+                </style>
+                <div class="pbox pbox-shaddow">
+                    <div id="j-user-proinfo" class="user-proinfo">
+                        <table class="seo">
+                            <caption>
+                                <span style="float: left">已添加 <strong><a href="http://www.weixiaoxin.com/WxUser/seo/"></a></strong>个&nbsp;&nbsp;</span>
+                                <span class="btnwrap btnpositive" style="float: right;">
+                                    <a href="http://www.weixiaoxin.com/WxUser/my_addwxuser" class="inner">添加账号</a>
+                                </span>
+                                <div style="clear: both;"></div>
+                            </caption>
+
+                            <tbody>
+                                <tr class="">
+                                    <td width="5%">头像</td>
+                                    <td width="15%">公众号名称</td>
+                                    <td width="15%">微信号</td>
+                                    <td width="20%">原始微信号</td>
+                                    <td width="20%">会员有效期</td>
+                                    <td width="20%">操作</td>
+                                </tr>
+                                <tr class="">
+                                    <td><span class="photos">
+                                        <img src="./UserIndex_files/525bf1d751ecb.jpg"></span></td>
+                                    <td>薇琪思</td>
+                                    <td>vekise</td>
+                                    <td>
+                                        <span id="ghname_span">gh_a9988e32bab5																</span>
+                                        <br>
+                                    </td>
+                                    <td>有效期：2013-11-13<br>
+                                        <a class="btnGreens" id="btnGreens" href="http://www.weixiaoxin.com/Pay/taocan/?wid=18946">查看特权</a></td>
+                                    <td>
+                                        <a class="btnGreens" id="btnGreens" style="line-height: 2.5" href="http://www.weixiaoxin.com/WxUser/minitools/?wid=18946">微信接口</a>
+                                        <a href="http://www.weixiaoxin.com/WxUser/my_editwxuser/?wid=18946">编辑</a>
+                                        <a href="http://www.weixiaoxin.com/WxUser/delwxaccount/?wid=18946" onclick="return confirm(&#39;确定要删除帐号吗？&#39;)">删除</a>								</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="clearfix pagetab-wrap">
+                        <ul class="pagetab">
+                            <li><a href="javascript:void(0);" class="current">使用指南</a></li>
+                        </ul>
+                    </div>
+                    <div class="user-guide">
+                        <ul class="clearfix">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

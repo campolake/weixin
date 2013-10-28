@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title 微信平台</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/Account.css")
+    @Styles.Render("~/Content/Style.css")
+    @Styles.Render("~/Content/User.css")
+    @Scripts.Render("~/Scripts/jquery-1.7.2.min.js")
+    @Scripts.Render("~/Scripts/jquery-ui.js")
+    @Scripts.Render("~/Scripts/md5.js")
+    @Scripts.Render("~/Scripts/validate.js")
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="topbar">
+                <div class="cleafix inner" style="min-width: 1200px;">
+                    <div class="notification">
+                        <ul id="j-rollingnews">
+                            <li>微小信新版上线<span class="date">2013-09-20</span></li>
+                        </ul>
+                    </div>
+                    <ul class="accountlink">
+                        <li class="item-user">
+                            <div class="multimenu">
+                                <p class="j-multimenu"><a href="http://www.weixiaoxin.com/WxUser/wxlist/">h622</a></p>
+                                <div class="child">
+                                    <ul class="list">
+                                        <li><a href="http://www.weixiaoxin.com/WxUser/my_addwxuser"><em class="ic-1">.</em>添加微信号</a></li>
+                                        <li><a href="http://www.weixiaoxin.com/WxUser/wxlist"><em class="ic-2">.</em>公号管理</a></li>
+                                        <li><a href="http://www.weixiaoxin.com/WxAdvs/addreal"><em class="ic-3">.</em>信息修改</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-logout"><a href="http://www.weixiaoxin.com/WxUser/loginout">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="header" style="height: 90px;">
+                <div class="cleafix inner">
+                    <h1 class="logo"><a href="" rel="home" title="微小信">微小信</a></h1>
+                    <ul class="nav">
+                        <li><a href="http://www.weixiaoxin.com/WxUser/wxlist/">公号管理</a></li>
+                        <li><a class="current" href="./wxIndex_files/wxIndex.htm">基础设置</a></li>
+                        <li><a href="http://www.weixiaoxin.com/WxSetting/minihome/?wid=18946">3G网站设置</a></li>
+                        <li><a href="http://www.weixiaoxin.com/Menu/vip/?wid=18946">VIP功能</a></li>
+                        <li><a href="http://www.weixiaoxin.com/MemberCard/edit_card/?wid=18946">会员卡</a></li>
+                        <li><a href="http://www.weixiaoxin.com/Book/index/?wid=18946">订餐系统</a></li>
+                        <li><a href="http://www.weixiaoxin.com/UserAPI/?wid=18946">其他功能</a></li>
+                        <li><a href="http://www.weixiaoxin.com/WxUser/statistic/?wid=18946">统计分析</a></li>
+                    </ul>
+                    <div style="display: none;">
+                        <a id="feedback" href="http://www.weixiaoxin.com/" onclick="return openDialog(this.href,refresh)" title="意见反馈" style="top: 135px;">意见反馈</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @RenderSection("featured", required: false)
+
+    @RenderBody()
+    <footer>
+        <p>All Rights Reserved</p>
+        <p>ESON </p>
+    </footer>
+</body>
+</html>

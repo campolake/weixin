@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "AutoList";
+    Layout = "~/Views/Shared/_WxLayout.cshtml";
+}
+
+<div id="nav_sub">
+   <ul>
+      <li><a href="http://www.weixiaoxin.com/WxUser/minitools/?wid=18946">功能管理</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_follow?wid=18946">关注回复</a></li>
+      <li> <a class="current" href="./AutoList_files/AutoList.htm">文本回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=2&wid=18946">图文回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=4&wid=18946">多图回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=3&wid=18946">语音回复</a></li>
+   </ul>
+
+</div>
+<div class="clear"></div>
+<link href="./AutoList_files/style.css" rel="stylesheet" type="text/css">
+<div class="clearfix main">
+    <div class="aside">
+    	
+	</div>
+	<div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">
+文本回复				</h3>
+            </div>
+            <div class="pbody">
+	           	<div class="pbox pbox-shaddow">
+          <div class="cLineB">
+              <h4 class="left">自定义回复信息 (1) 条</h4>
+                  <div class="searchbar right">	                  
+                  <form action="http://www.weixiaoxin.com/AutoReplay/auto_list" method="get">
+					 <input type="hidden" name="type" value="">
+                 	 <input type="text" value="" name="keyz" placeholder="输入关键词搜索" class="txt left" id="msgSearchInput">
+                  <select name="types">
+	                  <option value="0" selected="selected">全部</option>
+	                  <option value="1" selected="selected">文字</option><option value="2">图文</option><option value="3">语音</option><option value="4">多图文</option>                  </select>
+                  <input type="hidden" value="18946" name="wid">
+                  <input type="submit" title="搜索" class="btnGrayS" href="javascript:;" id="msgSearchBtn" value="搜索">
+                  </form>
+                  </div>
+              <div class="clr"></div>
+          </div>
+          <div class="cLine">
+            <div class="pageNavigator left">
+<a class="btnGrayS vm bigbtn" title="新增文本自定义回复" href="http://www.weixiaoxin.com/AutoReplay/auto_add?type=1&wid=18946"><img class="vm" src="./AutoList_files/text.png">新增文本自定义回复</a>　
+<a onclick="location.href=&#39;/AutoReplay/csv?type=1&amp;wid=18946&#39;" class="btnGrayS vm bigbtn">批量导入</a>  
+<a onclick="location.href=&#39;/AutoReplay/outtxt?type=1&amp;wid=18946&#39;;" class="btnGrayS vm bigbtn">批量导出</a>            </div>
+          
+            <div class="clr"></div>
+          </div>
+          <div class="msgWrap">
+          <form id="info" action="http://www.weixiaoxin.com/AutoReplay/auto_list" method="post">
+				<input type="hidden" name="type" value="">
+          	 <input type="hidden" value="18946" name="wid">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" class="ListProduct">
+              <thead>
+                <tr>
+					<th width="10%" class="">选择</th>
+					<th width="20%" class="">关键词</th>
+					<th width="30%" class="">回答</th>
+					<th width="10%" class="">分类</th>
+					<th width="15%" class="">请求次数</th>
+					<th width="15%" class="">操作</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+                 <tr>
+                  <td>  <input type="checkbox" class="checkitem" value="172901" name="del_id[]"></td>
+                  <td>功能</td>
+                  <td><div class="answer_text"></div></td>
+                  <td>文字</td>
+				  <td>244</td>
+                  <td class="norightborder">
+                  	<a style="display:none;" class="workname lightview" title=" ::  :: width: 287, height: 537" rel="iframe" href="http://www.weixiaoxin.com/AutoReplay/yshow?type=&gid=172901">预览</a> 
+                  	<a title="编辑文本" href="http://www.weixiaoxin.com/AutoReplay/auto_edit?type=1&wid=18946&gid=172901">编辑</a> 
+                  	<a href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del?wid=18946&gid=172901');">删除</a>
+                  </td>          
+                </tr>                     			<tr>
+                <td colspan="6">
+                	<input type="checkbox" onclick="checkAll(this.form, &#39;del_id&#39;)" name="chkall" id="chkall">
+                	<label for="checkallBottom">全选</label>
+					<input type="radio" value="1" name="optype">
+					删除
+                    <a onclick="if(confirm(&#39;您确定操作吗?&#39;)){checkvotethis();}" class="btnGreens" href="JavaScript:void(0);"><span>确定</span></a>
+				</td>
+                </tr>
+              </tbody>
+            </table>
+           </form> 
+
+          </div>           
+<div>
+<h2 style="margin-top:15px;">回答不上时请设置关键词来关联自定义的回复内容，多条的会随机选取1条，关键词用;隔开! 
+<span class="FAQ" style="display:none;"><a title=" :: " rel="gallery[myset]" class="lightview" href="http://www.weixiaoxin.com/Public/wxapi/huidabushang.gif">
+<img title="帮助" class="vm" src="./AutoList_files/help.png"></a>
+</span>
+</h2>
+<form action="http://www.weixiaoxin.com/AutoReplay/auto_add_info" method="post">
+<input type="hidden" name="type" value="">
+<input type="hidden" value="18946" name="wid">
+  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+  	<tbody>
+  	<tr>
+		<td>
+        	<textarea name="unkonwn_reply" style="width:98%; height:16px; margin:5px 0" class="px">功能</textarea>
+        </td>
+		<td width="58">
+			<input type="submit" class="btnGreens right" value="保存" name="sbkey">
+		</td>
+	</tr>
+  </tbody>
+  </table>
+</form>
+</div> 
+
+          <div class="cLine">
+           	 <div class="pageNavigator right">
+                 		
+			<div class="pages">
+		<a href="javascript:void(0);">«</a>          <a href="javascript:void(0);">»</a> 
+		<a class="fl ff1">共1页</a>
+			</div>
+		              </div>
+            <div class="clr"></div>
+          </div>
+                </div>
+                <div class="pbox pbox-shaddow">
+				</div>
+                
+           </div>
+        </div>
+    </div>
+</div>
+<script>
+   function checkvotethis() {
+		var aa=document.getElementsByName('del_id[]');
+		var mnum = aa.length;
+		j=0;
+		for(i=0;i<mnum;i++){
+			if(aa[i].checked){
+				j++;
+			}
+		}
+		if(j>0) {
+			document.getElementById('info').submit();
+		} else {
+			alert('未选中任何文章或回复！')
+		}
+	}
+	function checkAll(form, name) {
+	for(var i = 0; i < form.elements.length; i++) {
+	var e = form.elements[i];
+	if(e.name.match(name)) {
+	e.checked = form.elements['chkall'].checked;
+	}
+	}
+	}
+
+	function drop_confirm(msg, url){
+		if(confirm(msg)){
+			window.location = url;
+		}
+	}
+  </script>

@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "AddWXUse";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="clearfix main">
+    <div class="aside">
+    	
+	</div>
+	<div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle"><span class="green"> </span>添加微信账号</h3>
+
+            </div>
+            <div class="pbody">
+	           	<div class="pbox pbox-shaddow">
+<div class="msgWrap">
+ <form action="./AddUser_files/AddUser.htm" method="post" onsubmit="return Validator.Validate(this,1)" id="postform" enctype="multipart/form-data">
+		<input type="hidden" name="step" value="2">
+			<table width="100%" cellspacing="0" cellpadding="0" border="0" style=" margin:20px 0 0 0;" class="userinfoArea">
+			<thead>
+				<tr>
+					<th width="180" align="right">行业：</th>
+					<td>					
+					<select name="the_class_id_1" id="the_class_id_1">
+						<option value="">请选择菜单</option>
+						<option value="1">媒体网络</option><option value="3">时尚生活</option><option value="5">企业</option><option value="7">网络科技</option><option value="9">娱乐</option><option value="14">教育</option><option value="18">文化</option><option value="20">政府机构</option><option value="24">营销</option><option value="25">汽车</option><option value="31">动漫</option><option value="36">游戏</option><option value="47">公益</option><option value="49">星座</option><option value="51">财经</option><option value="61">公共名人</option><option value="66">媒体人</option><option value="71">体育</option><option value="108">公务人员</option>					</select>
+					<select name="the_class_id_2" id="the_class_id_2">
+						<option value="">请选择菜单</option>
+					</select>
+					</td>
+				</tr>
+							  </thead>
+  <tbody>	
+				<tr>
+					<th width="180" align="right">地区：</th>
+					<td>					
+					<select name="the_area_id_1" id="the_area_id_1">
+						<option value="">请选择菜单</option>
+						<option value="1">安徽省</option><option value="3">北京市</option><option value="5">重庆市</option><option value="7">香港</option><option value="8">上海市</option><option value="10">黑龙江省</option><option value="12">四川省</option><option value="14">山东省</option><option value="17">湖北省</option><option value="18">广东省</option><option value="19">辽宁省</option><option value="20">浙江省</option><option value="21">陕西省</option><option value="22">河南省</option><option value="23">河北省</option><option value="24">福建省</option><option value="25">江苏省</option><option value="26">台湾省</option><option value="29">云南省</option><option value="30">湖南省</option><option value="31">海南省</option><option value="32">甘肃省</option><option value="33">山西省</option><option value="34">广西</option><option value="35">江西省</option><option value="36">内蒙古</option><option value="37">新疆</option><option value="38">天津市</option><option value="39">贵州省</option><option value="40">宁夏</option><option value="46">钓鱼岛</option><option value="50">青海省</option><option value="53">澳门</option><option value="103">吉林省</option><option value="156">西藏</option>					</select>
+					<select name="the_area_id_2" id="the_area_id_2">
+						<option value="">请选择菜单</option>
+					</select>
+					若不到市级，可以不选择。
+					</td>
+				</tr>
+				<tr>
+					<th width="180" align="right">公众号名称：</th>
+					<td>
+					<input class="px" title="帐号名称" name="nickname" id="nickname" datatype="Require" msg="公众号名称必填" value="" type="text" style="display:inline">
+					<span class="hui" style="color:red;">例如：微信</span>
+					</td>
+				</tr>
+				<tr>
+					<th align="right">微信号：</th>
+					<td>
+						<input class="px" title="微信帐号" type="text" datatype="Require" msg="微信号必填" name="wxnickname" id="wxnickname" value="" style="display:inline">
+						<span class="hui" style="color:red;">例如：weixin</span> 
+					</td>
+				</tr>
+				<tr>
+					<th align="right">公众号原始id：</th>
+					<td>
+						<input class="px" title="微信原始帐号" type="text" datatype="Require" msg="公众号原始id必填" name="wxusername" id="wxusername" value="" style="display:inline">
+						<span class="hui" style="color:red;">例如：gh_xxxxxxxxxxxx ,或者 wxid_xxxxxxxxxxxxx </span>
+					</td>
+				</tr>
+				<tr>
+					<th align="right" valign="top">头像：</th>
+					<td>
+												
+						<p id="upload" style=""><input class="px" type="file" name="picfile" id="picfile" title="本地上传" style="display:inline"><span style="cursor:pointer;">[使用远程头像]</span></p>
+						<p id="remotefile" style="display:none"><input type="text" class="px" id="picurl" name="picurl" title="远程头像" value=""><span style="cursor:pointer;">[使用上传头像]</span></p>
+						
+						<span class="hui">尺寸建议100x100，会自动显示成圆角</span>
+					</td>
+				</tr>
+				<tr>
+					<th align="right" valign="top">微信二维码：</th>
+					<td>
+												
+						<p id="upload2" style=""><input type="file" name="profile_qrcode" id="profile_qrcode" title="本地上传" style="display:inline"></p>
+						<span class="hui">(点击官方二维码图片下载，选择文件后，要点击“开始上传”按钮。)</span>
+					</td>
+				</tr>
+				<tr>
+					<th align="right" valign="top">介绍文字：</th>
+					<td><textarea class="px" style="width:450px;height:100px;" title="介绍文字" name="intro"></textarea></td>
+				</tr>
+				<tr>
+					<th align="right" valign="top">关键词：</th>
+					<td><input class="px" title="关键词" type="text" name="key_word" id="key_word" value="" style="display:inline">(多个词用、分开)</td>
+				</tr>
+				<tr>
+					<th align="right" valign="top">网站地址：</th>
+					<td><input class="px" title="网站地址" type="text" name="site" id="site" value="" style="display:inline">(非必填)</td>
+				</tr>
+				<tr>
+					<th height="83">&nbsp;</th>
+					<td>
+						<span class="btnwrap btnpositive"><input class="inner" type="submit" name="submit" value="提交"></span>
+					</td>
+				</tr>
+				  </tbody>
+			</table>
+	</form>
+	<script language="javascript">
+
+$(document).ready(function(){
+	$('#upload span').click(function(){
+		$('#upload').hide();
+		$('#remotefile').show();
+		
+	});
+	$('#remotefile span').click(function(){
+		$('#upload').show();
+		$('#remotefile').hide();
+		$('#picifle').val('');
+	});
+	$('#submit').click(function(){
+		$('#postform').submit();
+	});
+	
+	$('#the_class_id_1').change(function(){
+		loadArc($("#"+this.id).val(),1,'the_class_id_2');
+	})
+	
+	$('#the_area_id_1').change(function(){
+		loadArc($("#"+this.id).val(),2,'the_area_id_2');
+	})
+	
+	//弹框选择文章的图片
+	var loadArc = function(aid,type,show_id){
+		
+		if(type==1){
+			var url='/WxAjax/getClass/?id='+aid;
+		}else{
+			var url='/WxAjax/getArea/?id='+aid;
+		}
+		$.ajax({url: url ,cache:false, type:'POST' , dataType:'json' ,contentType: "application/json; charset=utf-8",data : { 'inajax':1}
+			, success: function(data){
+					var html = '<option value="">请选择菜单</option>';
+					 $.each(data,function(i,n){
+						if(type==1){
+							html += '<option value="'+n.class_id+'">'+n.class_name+'</option>';
+						}else{
+							html += '<option value="'+n.area_id+'">'+n.area_name+'</option>';
+						}
+					 })
+										
+					$('#'+show_id).html(html);		
+			}
+		});
+	}
+
+})
+</script>
+  </div> 
+
+                </div>
+                
+                
+                <div class="pbox pbox-shaddow">
+				</div>
+                
+           </div>
+        </div>
+    </div>
+</div>

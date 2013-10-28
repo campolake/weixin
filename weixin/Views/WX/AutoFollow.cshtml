@@ -1,0 +1,208 @@
+﻿@{
+    ViewBag.Title = "AutoFollow";
+    Layout = "~/Views/Shared/_WxLayout.cshtml";
+}
+<div id="nav_sub">
+   <ul>
+      <li><a href="http://www.weixiaoxin.com/WxUser/minitools/?wid=18946">功能管理</a></li>
+      <li><a class="current" href="./AutoFloow_files/AutoFloow.htm">关注回复</a></li>
+      <li> <a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=1&wid=18946">文本回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=2&wid=18946">图文回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=4&wid=18946">多图回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=3&wid=18946">语音回复</a></li>
+   </ul>
+
+</div>
+<div class="clear"></div>
+<link href="./AutoFloow_files/style.css" rel="stylesheet" type="text/css">
+<div class="clearfix main">
+    <div class="aside">
+    	
+	</div>
+	<div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">关注时自动回复</h3>
+            </div>
+            <div class="pbody">
+	           	<div class="pbox pbox-shaddow">
+
+					<div class="cLineB">
+					  <h4>关注时自动回复内容 <span class="FAQ">可参考右边的范例来写，拷贝到输入框后修改！</span><br>
+					  <span style="color:red;">如果留空的话，则根据开启的工具介绍展示给粉丝。</span>
+					  </h4>
+					 </div>
+					         <div class="zdhuifu">
+					                  <form action="http://www.weixiaoxin.com/AutoReplay/auto_follow" method="post">
+									  <input type="hidden" name="type" value="">
+					                  <input type="hidden" value="18946" name="wid">
+					  
+					  <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					  <tbody><tr><td height="5"></td><td></td></tr>
+					<tr>
+					<td width="470" valign="top"><textarea name="info" id="Hfcontent" style="width:420px; height:280px; margin:5px 0" class="px"></textarea></td>
+					<td valign="top">
+					     	<div style="margin-left:20px" class="zdhuifu">
+					<h4>参考范例：</h4>
+					Hi~现已开通功能：<br>
+					1、谜语机器人<br>
+					2、脑筋急转弯<br>
+					3、人品计算器<br>
+					4、星座查询<br>
+					5、翻译<br>
+					6、美味食谱<br>
+					7、淘宝卖家<br>
+					8、音乐歌曲<br>
+					9、冷笑话<br>
+					10、人脸检测<br>
+					11、小黄鸡陪聊<br>
+					回复数字查看使用方法.
+					</div></td>
+					</tr>
+					<tr>
+					<td height="50">
+					<div class="left" style="margin-top:10px">
+					<input type="submit" class="btnGreen left" name="sbmt" value="保存">　<a class="btnGray vm" href="http://www.weixiaoxin.com/AutoReplay/auto_add_p?wid=18946&kwd=Hello2BizUser">切换到图文模式</a>　<a class="btnGray vm" href="http://www.weixiaoxin.com/AutoReplay/auto_add_m?wid=18946&kwd=Hello2BizUser">切换到音乐模式</a>
+					</div>
+					<div class="right" style="margin-top:17px">
+					<ul>
+					<li class="biaoqing"><span>表情</span>
+					<ul>
+						<li><img onclick="jsbq(&#39;微笑&#39;)" alt="微笑" src="./AutoFloow_files/0.gif"></li>
+						<li><img onclick="jsbq(&#39;撇嘴&#39;)" alt="撇嘴" src="./AutoFloow_files/1.gif"></li>
+						<li><img onclick="jsbq(&#39;色&#39;)" alt="色" src="./AutoFloow_files/2.gif"></li>
+						<li><img onclick="jsbq(&#39;发呆&#39;)" alt="发呆" src="./AutoFloow_files/3.gif"></li>
+						<li><img onclick="jsbq(&#39;得意&#39;)" alt="得意" src="./AutoFloow_files/4.gif"></li>
+						<li><img onclick="jsbq(&#39;流泪&#39;)" alt="流泪" src="./AutoFloow_files/5.gif"></li>
+						<li><img onclick="jsbq(&#39;害羞&#39;)" alt="害羞" src="./AutoFloow_files/6.gif"></li>
+						<li><img onclick="jsbq(&#39;闭嘴&#39;)" alt="闭嘴" src="./AutoFloow_files/7.gif"></li>
+						<li><img onclick="jsbq(&#39;睡&#39;)" alt="睡" src="./AutoFloow_files/8.gif"></li>
+						<li><img onclick="jsbq(&#39;大哭&#39;)" alt="大哭" src="./AutoFloow_files/9.gif"></li>
+						<li><img onclick="jsbq(&#39;尴尬&#39;)" alt="尴尬" src="./AutoFloow_files/10.gif"></li>
+						<li><img onclick="jsbq(&#39;发怒&#39;)" alt="发怒" src="./AutoFloow_files/11.gif"></li>
+						<li><img onclick="jsbq(&#39;调皮&#39;)" alt="调皮" src="./AutoFloow_files/12.gif"></li>
+						<li><img onclick="jsbq(&#39;呲牙&#39;)" alt="呲牙" src="./AutoFloow_files/13.gif"></li>
+						<li><img onclick="jsbq(&#39;惊讶&#39;)" alt="惊讶" src="./AutoFloow_files/14.gif"></li>
+						<li><img onclick="jsbq(&#39;难过&#39;)" alt="难过" src="./AutoFloow_files/15.gif"></li>
+						<li><img onclick="jsbq(&#39;酷&#39;)" alt="酷" src="./AutoFloow_files/16.gif"></li>
+						<li><img onclick="jsbq(&#39;冷汗&#39;)" alt="冷汗" src="./AutoFloow_files/17.gif"></li>
+						<li><img onclick="jsbq(&#39;抓狂&#39;)" alt="抓狂" src="./AutoFloow_files/18.gif"></li>
+						<li><img onclick="jsbq(&#39;吐&#39;)" alt="吐" src="./AutoFloow_files/19.gif"></li>
+						<li><img onclick="jsbq(&#39;偷笑&#39;)" alt="偷笑" src="./AutoFloow_files/20.gif"></li>
+						<li><img onclick="jsbq(&#39;可爱&#39;)" alt="可爱" src="./AutoFloow_files/21.gif"></li>
+						<li><img onclick="jsbq(&#39;白眼&#39;)" alt="白眼" src="./AutoFloow_files/22.gif"></li>
+						<li><img onclick="jsbq(&#39;傲慢&#39;)" alt="傲慢" src="./AutoFloow_files/23.gif"></li>
+						<li><img onclick="jsbq(&#39;饥饿&#39;)" alt="饥饿" src="./AutoFloow_files/24.gif"></li>
+						<li><img onclick="jsbq(&#39;困&#39;)" alt="困" src="./AutoFloow_files/25.gif"></li>
+						<li><img onclick="jsbq(&#39;惊恐&#39;)" alt="惊恐" src="./AutoFloow_files/26.gif"></li>
+						<li><img onclick="jsbq(&#39;流汗&#39;)" alt="流汗" src="./AutoFloow_files/27.gif"></li>
+						<li><img onclick="jsbq(&#39;憨笑&#39;)" alt="憨笑" src="./AutoFloow_files/28.gif"></li>
+						<li><img onclick="jsbq(&#39;大兵&#39;)" alt="大兵" src="./AutoFloow_files/29.gif"></li>
+						<li><img onclick="jsbq(&#39;奋斗&#39;)" alt="奋斗" src="./AutoFloow_files/30.gif"></li>
+						<li><img onclick="jsbq(&#39;咒骂&#39;)" alt="咒骂" src="./AutoFloow_files/31.gif"></li>
+						<li><img onclick="jsbq(&#39;疑问&#39;)" alt="疑问" src="./AutoFloow_files/32.gif"></li>
+						<li><img onclick="jsbq(&#39;嘘&#39;)" alt="嘘" src="./AutoFloow_files/33.gif"></li>
+						<li><img onclick="jsbq(&#39;晕&#39;)" alt="晕" src="./AutoFloow_files/34.gif"></li>
+						<li><img onclick="jsbq(&#39;折磨&#39;)" alt="折磨" src="./AutoFloow_files/35.gif"></li>
+						<li><img onclick="jsbq(&#39;衰&#39;)" alt="衰" src="./AutoFloow_files/36.gif"></li>
+						<li><img onclick="jsbq(&#39;骷髅&#39;)" alt="骷髅" src="./AutoFloow_files/37.gif"></li>
+						<li><img onclick="jsbq(&#39;敲打&#39;)" alt="敲打" src="./AutoFloow_files/38.gif"></li>
+						<li><img onclick="jsbq(&#39;再见&#39;)" alt="再见" src="./AutoFloow_files/39.gif"></li>
+						<li><img onclick="jsbq(&#39;擦汗&#39;)" alt="擦汗" src="./AutoFloow_files/40.gif"></li>
+						<li><img onclick="jsbq(&#39;抠鼻&#39;)" alt="抠鼻" src="./AutoFloow_files/41.gif"></li>
+						<li><img onclick="jsbq(&#39;鼓掌&#39;)" alt="鼓掌" src="./AutoFloow_files/42.gif"></li>
+						<li><img onclick="jsbq(&#39;糗大了&#39;)" alt="糗大了" src="./AutoFloow_files/43.gif"></li>
+						<li><img onclick="jsbq(&#39;坏笑&#39;)" alt="坏笑" src="./AutoFloow_files/44.gif"></li>
+						<li><img onclick="jsbq(&#39;左哼哼&#39;)" alt="左哼哼" src="./AutoFloow_files/45.gif"></li>
+						<li><img onclick="jsbq(&#39;右哼哼&#39;)" alt="右哼哼" src="./AutoFloow_files/46.gif"></li>
+						<li><img onclick="jsbq(&#39;哈欠&#39;)" alt="哈欠" src="./AutoFloow_files/47.gif"></li>
+						<li><img onclick="jsbq(&#39;鄙视&#39;)" alt="鄙视" src="./AutoFloow_files/48.gif"></li>
+						<li><img onclick="jsbq(&#39;委屈&#39;)" alt="委屈" src="./AutoFloow_files/49.gif"></li>
+						<li><img onclick="jsbq(&#39;快哭了&#39;)" alt="快哭了" src="./AutoFloow_files/50.gif"></li>
+						<li><img onclick="jsbq(&#39;阴险&#39;)" alt="阴险" src="./AutoFloow_files/51.gif"></li>
+						<li><img onclick="jsbq(&#39;亲亲&#39;)" alt="亲亲" src="./AutoFloow_files/52.gif"></li>
+						<li><img onclick="jsbq(&#39;吓&#39;)" alt="吓" src="./AutoFloow_files/53.gif"></li>
+						<li><img onclick="jsbq(&#39;可怜&#39;)" alt="可怜" src="./AutoFloow_files/54.gif"></li>
+						<li><img onclick="jsbq(&#39;菜刀&#39;)" alt="菜刀" src="./AutoFloow_files/55.gif"></li>
+						<li><img onclick="jsbq(&#39;西瓜&#39;)" alt="西瓜" src="./AutoFloow_files/56.gif"></li>
+						<li><img onclick="jsbq(&#39;啤酒&#39;)" alt="啤酒" src="./AutoFloow_files/57.gif"></li>
+						<li><img onclick="jsbq(&#39;篮球&#39;)" alt="篮球" src="./AutoFloow_files/58.gif"></li>
+						<li><img onclick="jsbq(&#39;乒乓&#39;)" alt="乒乓" src="./AutoFloow_files/59.gif"></li>
+						<li><img onclick="jsbq(&#39;咖啡&#39;)" alt="咖啡" src="./AutoFloow_files/60.gif"></li>
+						<li><img onclick="jsbq(&#39;饭&#39;)" alt="饭" src="./AutoFloow_files/61.gif"></li>
+						<li><img onclick="jsbq(&#39;猪头&#39;)" alt="猪头" src="./AutoFloow_files/62.gif"></li>
+						<li><img onclick="jsbq(&#39;玫瑰&#39;)" alt="玫瑰" src="./AutoFloow_files/63.gif"></li>
+						<li><img onclick="jsbq(&#39;凋谢&#39;)" alt="凋谢" src="./AutoFloow_files/64.gif"></li>
+						<li><img onclick="jsbq(&#39;示爱&#39;)" alt="示爱" src="./AutoFloow_files/65.gif"></li>
+						<li><img onclick="jsbq(&#39;爱心&#39;)" alt="爱心" src="./AutoFloow_files/66.gif"></li>
+						<li><img onclick="jsbq(&#39;心碎&#39;)" alt="心碎" src="./AutoFloow_files/67.gif"></li>
+						<li><img onclick="jsbq(&#39;蛋糕&#39;)" alt="蛋糕" src="./AutoFloow_files/68.gif"></li>
+						<li><img onclick="jsbq(&#39;闪电&#39;)" alt="闪电" src="./AutoFloow_files/69.gif"></li>
+						<li><img onclick="jsbq(&#39;炸弹&#39;)" alt="炸弹" src="./AutoFloow_files/70.gif"></li>
+						<li><img onclick="jsbq(&#39;刀&#39;)" alt="刀" src="./AutoFloow_files/71.gif"></li>
+						<li><img onclick="jsbq(&#39;足球&#39;)" alt="足球" src="./AutoFloow_files/72.gif"></li>
+						<li><img onclick="jsbq(&#39;瓢虫&#39;)" alt="瓢虫" src="./AutoFloow_files/73.gif"></li>
+						<li><img onclick="jsbq(&#39;便便&#39;)" alt="便便" src="./AutoFloow_files/74.gif"></li>
+						<li><img onclick="jsbq(&#39;月亮&#39;)" alt="月亮" src="./AutoFloow_files/75.gif"></li>
+						<li><img onclick="jsbq(&#39;太阳&#39;)" alt="太阳" src="./AutoFloow_files/76.gif"></li>
+						<li><img onclick="jsbq(&#39;礼物&#39;)" alt="礼物" src="./AutoFloow_files/77.gif"></li>
+						<li><img onclick="jsbq(&#39;拥抱&#39;)" alt="拥抱" src="./AutoFloow_files/78.gif"></li>
+						<li><img onclick="jsbq(&#39;强&#39;)" alt="强" src="./AutoFloow_files/79.gif"></li>
+						<li><img onclick="jsbq(&#39;弱&#39;)" alt="弱" src="./AutoFloow_files/80.gif"></li>
+						<li><img onclick="jsbq(&#39;握手&#39;)" alt="握手" src="./AutoFloow_files/81.gif"></li>
+						<li><img onclick="jsbq(&#39;胜利&#39;)" alt="胜利" src="./AutoFloow_files/82.gif"></li>
+						<li><img onclick="jsbq(&#39;抱拳&#39;)" alt="抱拳" src="./AutoFloow_files/83.gif"></li>
+						<li><img onclick="jsbq(&#39;勾引&#39;)" alt="勾引" src="./AutoFloow_files/84.gif"></li>
+						<li><img onclick="jsbq(&#39;拳头&#39;)" alt="拳头" src="./AutoFloow_files/85.gif"></li>
+						<li><img onclick="jsbq(&#39;差劲&#39;)" alt="差劲" src="./AutoFloow_files/86.gif"></li>
+						<li><img onclick="jsbq(&#39;爱你&#39;)" alt="爱你" src="./AutoFloow_files/87.gif"></li>
+						<li><img onclick="jsbq(&#39;NO&#39;)" alt="NO" src="./AutoFloow_files/88.gif"></li>
+						<li><img onclick="jsbq(&#39;OK&#39;)" alt="OK" src="./AutoFloow_files/89.gif"></li>
+						<li><img onclick="jsbq(&#39;爱情&#39;)" alt="爱情" src="./AutoFloow_files/90.gif"></li>
+						<li><img onclick="jsbq(&#39;飞吻&#39;)" alt="飞吻" src="./AutoFloow_files/91.gif"></li>
+						<li><img onclick="jsbq(&#39;跳跳&#39;)" alt="跳跳" src="./AutoFloow_files/92.gif"></li>
+						<li><img onclick="jsbq(&#39;发抖&#39;)" alt="发抖" src="./AutoFloow_files/93.gif"></li>
+						<li><img onclick="jsbq(&#39;怄火&#39;)" alt="怄火" src="./AutoFloow_files/94.gif"></li>
+						<li><img onclick="jsbq(&#39;转圈&#39;)" alt="转圈" src="./AutoFloow_files/95.gif"></li>
+						<li><img onclick="jsbq(&#39;磕头&#39;)" alt="磕头" src="./AutoFloow_files/96.gif"></li>
+						<li><img onclick="jsbq(&#39;回头&#39;)" alt="回头" src="./AutoFloow_files/97.gif"></li>
+						<li><img onclick="jsbq(&#39;跳绳&#39;)" alt="跳绳" src="./AutoFloow_files/98.gif"></li>
+						<li><img onclick="jsbq(&#39;挥手&#39;)" alt="挥手" src="./AutoFloow_files/99.gif"></li>
+						<li><img onclick="jsbq(&#39;激动&#39;)" alt="激动" src="./AutoFloow_files/100.gif"></li>
+						<li><img onclick="jsbq(&#39;街舞&#39;)" alt="街舞" src="./AutoFloow_files/101.gif"></li>
+						<li><img onclick="jsbq(&#39;献吻&#39;)" alt="献吻" src="./AutoFloow_files/102.gif"></li>
+						<li><img onclick="jsbq(&#39;左太极&#39;)" alt="左太极" src="./AutoFloow_files/103.gif"></li>
+					</ul>
+					</li>
+					</ul>
+					</div>
+					<script type="text/javascript">
+					function jsbq(srt){
+					document.getElementById("Hfcontent").value=document.getElementById("Hfcontent").value+"/"+srt;
+					}
+					</script>
+					
+					
+					</td><td valign="top">
+					</td></tr>
+					
+					<tr>
+					<td colspan="2">
+					
+					备注：要实现关注时回复图文形式，只需添加关键词Hello2BizUser和对应回复，<br>
+					可以重复定义关键词Hello2BizUser不同的回复内容，系统随机抽取！</td>
+					</tr>
+					</tbody></table>
+					</form>
+					                   
+					               </div>
+                </div>
+                
+                
+                <div class="pbox pbox-shaddow">
+				</div>
+                
+           </div>
+        </div>
+    </div>
+</div>

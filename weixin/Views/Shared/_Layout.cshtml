@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title 微信平台</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/global.css")
+    @Styles.Render("~/Content/index.css")
+    @Scripts.Render("~/Scripts/jquery-1.7.2.min.js")
+    @Scripts.Render("~/Scripts/jquery-ui.js")
+    @Scripts.Render("~/Scripts/md5.js")
+    @Scripts.Render("~/Scripts/validate.js")
+</head>
+<body>
+    <header>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        @RenderBody()
+    </div>
+    <footer>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

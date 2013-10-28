@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "PayList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<style>
+.fl {
+    float: left;
+}
+
+.board {
+    background: url("/Public/wxapi/bg_repno.gif") no-repeat scroll 0 0 transparent;
+    padding-left: 55px;
+	margin-left:20px;
+}
+
+.td25{
+	text-align:center;
+}
+.td29 span{
+	padding-left:10px;
+}
+.searchbar{
+	padding:5px 0;
+}
+
+.changeapp li {
+    background-color: #F0FFDC;
+    border: 1px solid #64C269;
+    display: block;
+    float: left;
+    height: 70px;
+    margin: 0 5px 5px 0;
+    padding: 5px 10px;
+    position: relative;
+    text-align: center;
+    width: 320px;
+}
+
+.changeapp li label {
+    cursor: pointer;
+    display: block;
+}
+</style>
+<script>
+	$(document).ready(function(){
+		$(".ajax").colorbox();
+	});
+</script>
+<div class="clearfix main">
+    <div class="aside">
+    	
+	</div>
+	<div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">金币记录</h3>
+            </div>
+            <div class="pbody">
+	           	<div class="pbox pbox-shaddow">
+          <div class="cLineB">
+              <h4 class="left">当前剩余金币(<span style="color:red;">0.00</span>) </h4>
+                  <div class="searchbar right">	
+						<span style="color:red;"><a style="color:red;font-size:14px;" href="http://www.weixiaoxin.com/Pay/index/" target="_blank">【马上充值】</a></span>              
+						                  </div>
+              <div class="clr"></div>
+          </div>
+          <div class="msgWrap">
+       <table width="100%" cellspacing="0" cellpadding="0" border="0" class="ListProduct">
+              <thead>
+                <tr>
+					<th class="" width="10%">选择</th>
+					<th class="" width=""></th>
+					<th class="keywords" width="10%">金币</th>
+					<th class="keywords" width="50%">记录</th>
+					<th class="answer" width="30%">时间</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+                 <tr>
+                  <td>  <input type="checkbox" class="checkitem" value="6656" name="del_id[]"></td>
+				  <td>-</td>
+                  <td>消费<span style="color:red">60.00<span></span></span></td>
+				  <td>消费去版权功能,有效期至：2013-11-13 23:48:05</td>
+                  <td>2013-10-14 23:48:05</td>        
+                </tr><tr>
+                  <td>  <input type="checkbox" class="checkitem" value="6655" name="del_id[]"></td>
+				  <td>+</td>
+                  <td>充值<span style="color:blue">60.00<span></span></span></td>
+				  <td></td>
+                  <td>2013-10-14 23:47:24</td>        
+                </tr>                             </tbody>
+            </table>     
+				<div class="footactions" style="padding-left:10px">
+				  <div class="pages">		
+			<div class="pages">
+		<a href="javascript:void(0);">«</a>          <a href="javascript:void(0);">»</a> 
+		<a class="fl ff1">共1页</a>
+			</div>
+		</div>
+				</div>
+				
+				
+
+          </div>    
+                </div>
+                
+                
+                <div class="pbox pbox-shaddow">
+				</div>
+                
+           </div>
+        </div>
+    </div>
+</div>

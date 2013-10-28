@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "getpwd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="member">
+    <div class="member_top"></div>
+    <div class="MemberMain">
+        <h1>微小信</h1>
+	<form action="/index.php/WxUser/getpwd.php" method="POST">
+	<input name="step" value="2" type="hidden">
+       <ul class="FormList">
+            <li>
+                <em class="Icon Mail"></em>
+                <input class="text" name="email" title="请填写E-Mail" onclick="if(this.value=='请输入E-Mail'){this.value=''}" onblur="if(this.value==''){this.value='请输入E-Mail'}" type="text">
+                <!--<i></i>-->
+            </li>
+            <li>
+            <input class="button_02" value="找回密码" type="submit">　　<a href="/">登　录</a>
+            </li>
+        </ul>
+		<input name="redirect" value="" type="hidden">
+	</form>
+    </div>
+    <div class="member_bottom"></div>
+</div>

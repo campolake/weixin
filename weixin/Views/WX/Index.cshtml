@@ -1,0 +1,357 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_WxLayout.cshtml";
+}
+
+<div id="nav_sub">
+   <ul>
+      <li><a class="current" href="./wxIndex_files/wxIndex.htm">功能管理</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_follow?wid=18946">关注回复</a></li>
+      <li> <a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=1&wid=18946">文本回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=2&wid=18946">图文回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=4&wid=18946">多图回复</a></li>
+      <li><a href="http://www.weixiaoxin.com/AutoReplay/auto_list?types=3&wid=18946">语音回复</a></li>
+   </ul>
+
+</div>
+<div class="clear"></div>
+<link href="./wxIndex_files/style.css" rel="stylesheet" type="text/css">
+<script src="./wxIndex_files/jquery-1.7.2.min.js" type="text/javascript"></script>
+<style>
+.content p, .content table, .content tr, .content td, .content th, .content dl, .content dt, .content dd, .content ol, .content ul, .content li, .content input, .content button, .content select, .content stextarea {
+    font-size: 12px;
+    line-height: 35px;
+}
+.link_function_des table {
+    line-height: 35px;
+}
+.link_function_des th {
+    width: 12%;
+}
+
+.changeapp li {
+    background-color: #F6F5F3;
+    border: 1px solid #EEEEEE;
+    display: block;
+    float: left;
+    height: 25px;
+    margin: 0 5px 5px 0;
+    padding: 5px;
+    position: relative;
+    width: 220px;
+	
+}
+.changeapp li div {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #E0F0FF;
+    border-color: #3C7CBA;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    display: none;
+    left: -1px;
+    padding: 5px;
+    position: absolute;
+    top: 35px;
+    width: 220px;
+    z-index: 999;
+}
+.changeapp a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.link_function_des th {
+    width: 15%;
+}
+.z9999{ z-index:9999;}
+</style>
+<div class="clearfix main">
+    <!--<div class="aside">
+    
+</div>-->
+<div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">功能管理</h3>
+            </div>
+            <div class="pbody">
+                 	<div class="pbox pbox-shaddow">
+						<div class="link_function_des">
+							<h3>公众账号:<span class="yellow" style="margin-left:10px">薇琪思</span></h3>
+							<table>
+								<colgroup>
+									<col width="180px">
+									<col width="180px">
+								</colgroup>
+								<tbody><tr>
+									<th>原始账号</th>
+									<td class="gray" colspan="2"><span class="gray">gh_a9988e32bab5</span></td>
+								</tr>
+								<tr>
+									<th>接口地址</th>
+									<td class="green" colspan="2">http://www.weixiaoxin.com/API/AGZWNVY7ADUCNA==</td>
+								</tr>
+								<tr style=" background: #2db2f3; ">
+									<th>VIP接口地址</th>
+									<td class="green" colspan="2">http://vip1.vxiaoxin.com/AGZWNVY7ADUCNA==</td>
+								</tr>								<tr>
+									<th>Token</th>
+									<td class="green" colspan="2">4ea332ec2f74f8c36b8ead15ad605486</td>
+								</tr>
+								<tr>
+									<th>备注</th>
+									<td class="gray" colspan="2">将【接口地址】和【token】到公众平台中填写。<a style="margin-left:20px;margin-bottom:5px;" href="http://mp.weixin.qq.com/" target="_blank" class="btnGreens">前往公众平台配置</a></td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+						<div class="link_function_des">
+							<h3>【如果您不想使用我们提供的接口地址，请备好虚拟空间然后请看这里】</h3>
+							<table>
+								<colgroup>
+									<col width="180px">
+									<col width="180px">
+								</colgroup>
+								<tbody><tr>
+									<th>1.</th>
+									<td>空间必须支持php</td>
+								</tr>
+								<tr>
+									<th>2.</th>
+									<td>把下载好的微信接口文件api.php文件上传到你的php空间根目录下
+			<a class="btnGreens" style="z-index:9998" href="http://www.weixiaoxin.com/UserAPI/apiDownload?wid=18946" title="下载接口文件">下载接口文件</a>
+			</td>
+								</tr>
+								<tr>
+									<th>3.</th>
+									<td>比如你的域名是www.xxx.com，那么接口地址就是http://www.xxx.com/api.php,Token填上面的token</td>
+								</tr>
+							</tbody></table>
+							
+						</div>
+
+                </div>
+                <div class="pbox pbox-shaddow">
+	<div class="content">
+ <div class="msgWrap form">
+ <ul id="tags">
+ <li class="selectTag"><a href="javascript:void(0)" onclick="selectTag(&#39;tagContent1&#39;,this)">生活服务</a> </li><li><a href="javascript:void(0)" onclick="selectTag(&#39;tagContent2&#39;,this)">休闲娱乐</a> </li><li><a href="javascript:void(0)" onclick="selectTag(&#39;tagContent3&#39;,this)">教育学习</a> </li><li><a href="javascript:void(0)" onclick="selectTag(&#39;tagContent4&#39;,this)">营销活动</a> </li><li><a href="javascript:void(0)" onclick="selectTag(&#39;tagContent5&#39;,this)">即将推出</a> </li>  
+  <div class="clr"></div>
+  </ul>
+
+<div id="tagContent">
+ <div id="tagContent1" class="tagContent selectTag ">
+<fieldset>
+<ul class="changeapp">
+		 		<li><label> <input type="checkbox" value="21" onchange="changeapp(this,&#39;18946&#39;,&#39;21&#39;)" name="tid[]"> 身份证归属地查询<a id="more_setting_21" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=21" class="btnGreens">配置</a></label><div>身份证归属地查询<br> 身份证+号码<br>(例如：身份证350212198001010011)</div></li>
+
+					<li><label> <input type="checkbox" value="18" onchange="changeapp(this,&#39;18946&#39;,&#39;18&#39;)" name="tid[]"> 号码归属地查询<a id="more_setting_18" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=18" class="btnGreens">配置</a></label><div>查询手机号码归属地<br>例如：归属地+手机号<br>(例如:归属地15888888888)</div></li>
+
+					<li><label> <input type="checkbox" value="12" onchange="changeapp(this,&#39;18946&#39;,&#39;12&#39;)" name="tid[]"> 公交线路查询<a id="more_setting_12" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=12" class="btnGreens">配置</a></label><div>查询公交线路<br>城市+公交<br>(例如:厦门公交658)</div></li>
+
+					<li><label> <input type="checkbox" value="15" onchange="changeapp(this,&#39;18946&#39;,&#39;15&#39;)" name="tid[]"> 天气早知道<a id="more_setting_15" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=15" class="btnGreens">配置</a></label><div>查询天气<br>城市+天气<br>(例如:厦门天气)</div></li>
+
+					<li><label> <input type="checkbox" value="35" onchange="changeapp(this,&#39;18946&#39;,&#39;35&#39;)" name="tid[]"> 股票查询<a id="more_setting_35" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=35" class="btnGreens">配置</a></label><div>股票查询<br>股票+股票名称<br>(例如：股票腾讯控股或者gp腾讯控股或者股票00700或者gp00700)</div></li>
+
+					<li><label> <input type="checkbox" value="36" onchange="changeapp(this,&#39;18946&#39;,&#39;36&#39;)" name="tid[]"> 彩票<a id="more_setting_36" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=36" class="btnGreens">配置</a></label><div>可以查询彩票有：双色球、大乐透、七星彩、排列3、排列5、体彩22选5、胜负彩14场、任选9场、4场进球、6场半全场、老11选5、11选5、新11选5、双色球
+
+例如：彩票双色球</div></li>
+
+					<li><label> <input type="checkbox" value="37" onchange="changeapp(this,&#39;18946&#39;,&#39;37&#39;)" name="tid[]"> 快递查询<a id="more_setting_37" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=37" class="btnGreens">配置</a></label><div>查询快递<br>发送 快递名称+单号<br>如：韵达1200739360771</div></li>
+
+					<li><label> <input type="checkbox" value="43" onchange="changeapp(this,&#39;18946&#39;,&#39;43&#39;)" name="tid[]"> 火车余票查询<a id="more_setting_43" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=43" class="btnGreens">配置</a></label><div>火车（hc）+列车号，如火车D6209，hcD6209<br>
+火车（hc）起点+到+终点，如火车福州到厦门，hc福州到厦门。<br>
+后面还可以加数字哦，如“hc福州到厦门，3”表示3天内的所有列车。<br>
+“hc福州到厦门，0301”表示3月1日当天的列车。<br></div></li>
+
+					<li><label> <input type="checkbox" value="51" onchange="changeapp(this,&#39;18946&#39;,&#39;51&#39;)" name="tid[]"> LBS周边商铺<a id="more_setting_51" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=51" class="btnGreens">配置</a></label><div>开启此功能，直接发送地理位置信息，然后输入“附近便利店”</div></li>
+
+					<li><label> <input type="checkbox" value="52" onchange="changeapp(this,&#39;18946&#39;,&#39;52&#39;)" name="tid[]"> LBS周边生活地图版<a id="more_setting_52" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=52" class="btnGreens">配置</a></label><div>开启此功能，首先要发送地理位置信息，然后输入附近+关键词即可,
+例如 附近酒吧,附近学校,附近工商银行,附近医院,附近小吃,附近美食,附近酒吧,附近咖啡厅,附近公交站,附近加油站.......</div></li>
+
+					<li><label> <input type="checkbox" value="53" onchange="changeapp(this,&#39;18946&#39;,&#39;53&#39;)" name="tid[]"> LBS步行导航<a id="more_setting_53" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=53" class="btnGreens">配置</a></label><div>开启此功能，首先要发送地理位置信息，然后输入：
+步行厦大医院到厦大西村 或 厦大医院到厦大西村怎么走</div></li>
+
+					<li><label> <input type="checkbox" value="54" onchange="changeapp(this,&#39;18946&#39;,&#39;54&#39;)" name="tid[]"> LBS驾车导航<a id="more_setting_54" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=54" class="btnGreens">配置</a></label><div>开启此功能，首先要发送地理位置信息，然后输入：
+驾车厦大医院到厦大西村 或 厦大医院到厦大西村怎么开
+备注：进入地图还可以进行起点拖动使用</div></li>
+
+					<li><label> <input type="checkbox" value="55" onchange="changeapp(this,&#39;18946&#39;,&#39;55&#39;)" name="tid[]"> LBS路况查询<a id="more_setting_55" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=55" class="btnGreens">配置</a></label><div>开启此功能，首先要发送地理位置信息，然后输入 路况 2个字即可。
+红色表示拥堵，黄色表示有点堵，绿色表示道路很畅通。请点击放大看详情。</div></li>
+
+					<li><label> <input type="checkbox" value="56" onchange="changeapp(this,&#39;18946&#39;,&#39;56&#39;)" name="tid[]"> LBS发地理位置直接显示周边<a id="more_setting_56" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=56" class="btnGreens">配置</a></label><div>开启此开关,将不会提示地理位置已经记录，而是直接显示周边数据，不影响关键词。
+查询可以通过：附近+关键词，获取附近更精细的分类查询！
+例如：附近便利店 附近医院 附近美食 附近小吃 等等</div></li>
+
+					<li><label> <input type="checkbox" value="57" onchange="changeapp(this,&#39;18946&#39;,&#39;57&#39;)" name="tid[]"> LBS公交换成地图版<a id="more_setting_57" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=57" class="btnGreens">配置</a></label><div>开启此开关,可以查询公交某个站点到某个站点如何坐车，只能查你当前位置所在城市的公交等
+例如：公交龙山桥到SM 或者 厦大西村到中山路怎么坐车</div></li>
+
+			   
+		<div class="clr"></div>
+ </ul>
+</fieldset>
+</div>
+<div id="tagContent2" class="tagContent  ">
+<fieldset>
+<ul class="changeapp">
+		 		<li><label> <input type="checkbox" value="2" onchange="changeapp(this,&#39;18946&#39;,&#39;2&#39;)" name="tid[]"> 星座查询<a id="more_setting_2" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=2" class="btnGreens">配置</a></label><div>查询相关星座信息: <br>星座<br>今日+星座;<br>明天+星座;<br>本周+星座;<br>今年+星座;<br>星座+爱情;<br></div></li>
+
+					<li><label> <input type="checkbox" value="3" onchange="changeapp(this,&#39;18946&#39;,&#39;3&#39;)" name="tid[]"> 人品计算器<a id="more_setting_3" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=3" class="btnGreens">配置</a></label><div>每日人品计算<br>人品+姓名<br>(例如：李白人品)</div></li>
+
+					<li><label> <input type="checkbox" value="17" onchange="changeapp(this,&#39;18946&#39;,&#39;17&#39;)" name="tid[]"> 号码凶吉<a id="more_setting_17" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=17" class="btnGreens">配置</a></label><div>查询各种号码凶吉<br>凶吉+号码<br>(例如:凶吉15888888888)</div></li>
+
+					<li><label> <input type="checkbox" value="7" onchange="changeapp(this,&#39;18946&#39;,&#39;7&#39;)" name="tid[]"> 冷笑话<a id="more_setting_7" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=7" class="btnGreens">配置</a></label><div>获取丰富的冷笑话<br>笑话+关键字<br>(例如:笑话小白)</div></li>
+
+					<li><label> <input type="checkbox" value="13" onchange="changeapp(this,&#39;18946&#39;,&#39;13&#39;)" name="tid[]"> 音乐歌曲<a id="more_setting_13" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=13" class="btnGreens">配置</a></label><div>发送任意歌曲名称<br>歌曲+关键字 歌手+关键字(例如:歌曲后来 歌手刘若英)<br>歌曲+关键字(例如:歌曲双截棍)<br>歌+关键字(例如:歌冰雨)<br>音乐+关键字(例如:音乐心墻)<br>music+关键字(例如:music心墻)<br>还可以输入：播放音乐|来首歌|来首音乐|放歌|爱音乐|mp3|点首歌|点歌|我要听歌<br>来随机播放音乐</div></li>
+
+					<li><label> <input type="checkbox" value="10" onchange="changeapp(this,&#39;18946&#39;,&#39;10&#39;)" name="tid[]"> 美味食谱<a id="more_setting_10" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=10" class="btnGreens">配置</a></label><div>查询美味食谱做法<br>食谱+关键字<br>(例如:食谱红烧肉)</div></li>
+
+					<li><label> <input type="checkbox" value="11" onchange="changeapp(this,&#39;18946&#39;,&#39;11&#39;)" name="tid[]"> 健康指数计算器<a id="more_setting_11" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=11" class="btnGreens">配置</a></label><div>查询您的健康状态<br>身高+体重<br>(例如:身高175体重55)</div></li>
+
+					<li><label> <input type="checkbox" value="14" onchange="changeapp(this,&#39;18946&#39;,&#39;14&#39;)" name="tid[]"> 人脸检测<a id="more_setting_14" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=14" class="btnGreens">配置</a></label><div>检测图片中的人脸~<br>上传图片即可进行检测</div></li>
+
+					<li><label> <input type="checkbox" value="20" onchange="changeapp(this,&#39;18946&#39;,&#39;20&#39;)" name="tid[]"> 小黄鸡陪聊<a id="more_setting_20" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=20" class="btnGreens">配置</a></label><div>小黄鸡全程陪聊~<br>自由聊天工具，你懂的！</div></li>
+
+					<li><label> <input type="checkbox" value="22" onchange="changeapp(this,&#39;18946&#39;,&#39;22&#39;)" name="tid[]"> 称骨算命<a id="more_setting_22" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=22" class="btnGreens">配置</a></label><div>古老算命方式~<br>称骨算命+生辰<br>(例如：称骨算命1987-02-05 13)</div></li>
+
+					<li><label> <input type="checkbox" value="25" onchange="changeapp(this,&#39;18946&#39;,&#39;25&#39;)" name="tid[]"> 测测上辈子是什么<a id="more_setting_25" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=25" class="btnGreens">配置</a></label><div>测测上辈子是什么<br>名字+上辈子 <br>上辈子+名字(例如:上辈子郭德纲)</div></li>
+
+					<li><label> <input type="checkbox" value="23" onchange="changeapp(this,&#39;18946&#39;,&#39;23&#39;)" name="tid[]"> 解梦<a id="more_setting_23" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=23" class="btnGreens">配置</a></label><div>解梦,梦见~<br>解梦+关键字<br>梦见+关键字(例如：解梦英雄<br>梦见太阳)</div></li>
+
+					<li><label> <input type="checkbox" value="24" onchange="changeapp(this,&#39;18946&#39;,&#39;24&#39;)" name="tid[]"> 缘分<a id="more_setting_24" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=24" class="btnGreens">配置</a></label><div>测算两人的缘分<br>名字+和+名字+的缘分<br>(例如：杨幂和刘恺威的缘分)</div></li>
+
+					<li><label> <input type="checkbox" value="27" onchange="changeapp(this,&#39;18946&#39;,&#39;27&#39;)" name="tid[]"> 脑内图分析<a id="more_setting_27" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=27" class="btnGreens">配置</a></label><div>分析您的脑内图<br>名字+的脑内图 or 脑内图+名字<br>(例如：李白的脑内图)<br>脑内图 杜甫</div></li>
+
+					<li><label> <input type="checkbox" value="28" onchange="changeapp(this,&#39;18946&#39;,&#39;28&#39;)" name="tid[]"> 成分分析<a id="more_setting_28" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=28" class="btnGreens">配置</a></label><div>对您的名字进行进行成分分析<br>名字+的成分分析 or 名字+成分分析<br>(例如：李白的成分分析)<br></div></li>
+
+					<li><label> <input type="checkbox" value="34" onchange="changeapp(this,&#39;18946&#39;,&#39;34&#39;)" name="tid[]"> 小黄鸡加强版<a id="more_setting_34" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=34" class="btnGreens">配置</a></label><div>小黄鸡全程陪聊~<br>自由聊天工具，你懂的！</div></li>
+
+					<li><label> <input type="checkbox" value="40" onchange="changeapp(this,&#39;18946&#39;,&#39;40&#39;)" name="tid[]"> 糗事百科<a id="more_setting_40" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=40" class="btnGreens">配置</a></label><div>获取最新最热门的糗事百科<br>发送 糗事、qs、糗百，糗事百科</div></li>
+
+			   
+		<div class="clr"></div>
+ </ul>
+</fieldset>
+</div>
+<div id="tagContent3" class="tagContent  ">
+<fieldset>
+<ul class="changeapp">
+		 		<li><label> <input type="checkbox" value="1" onchange="changeapp(this,&#39;18946&#39;,&#39;1&#39;)" name="tid[]"> 翻译<a id="more_setting_1" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=1" class="btnGreens">配置</a></label><div>@加要翻译的内容语言不限制自动识别 <br>(例如：<br>@你去死吧 <br>@nice)</div></li>
+
+					<li><label> <input type="checkbox" value="4" onchange="changeapp(this,&#39;18946&#39;,&#39;4&#39;)" name="tid[]"> 脑筋急转弯<a id="more_setting_4" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=4" class="btnGreens">配置</a></label><div>发送关键字可以获取对应的脑筋急转弯<br>脑筋急转弯+关键词<br>(例如:脑筋急转弯小白)</div></li>
+
+					<li><label> <input type="checkbox" value="5" onchange="changeapp(this,&#39;18946&#39;,&#39;5&#39;)" name="tid[]"> 谜语机器人<a id="more_setting_5" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=5" class="btnGreens">配置</a></label><div>发送关键字可以获取对应的谜语<br>谜语+关键词<br>(例如:谜语小白)</div></li>
+
+					<li><label> <input type="checkbox" value="6" onchange="changeapp(this,&#39;18946&#39;,&#39;6&#39;)" name="tid[]"> 名人语录<a id="more_setting_6" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=6" class="btnGreens">配置</a></label><div>发送关键字可以获取对应的名人语录<br>关键字+语录<br>(例如:韩寒语录)</div></li>
+
+					<li><label> <input type="checkbox" value="31" onchange="changeapp(this,&#39;18946&#39;,&#39;31&#39;)" name="tid[]"> CET4/6级查询-12月<a id="more_setting_31" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=31" class="btnGreens">配置</a></label><div>CET4/6级查询(13年06月)<br>cet+名字+准考证号<br>例如：cet 杨凤 352011122105002</div></li>
+
+					<li><label> <input type="checkbox" value="33" onchange="changeapp(this,&#39;18946&#39;,&#39;33&#39;)" name="tid[]"> 语音读字<a id="more_setting_33" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=33" class="btnGreens">配置</a></label><div>发送：朗读+文字 朗读文字，如:朗读我爱你</div></li>
+
+					<li><label> <input type="checkbox" value="38" onchange="changeapp(this,&#39;18946&#39;,&#39;38&#39;)" name="tid[]"> 猜字游戏<a id="more_setting_38" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=38" class="btnGreens">配置</a></label><div>猜字游戏<br>4个数字，回复 开始猜字 开始游戏。回复 cz+数字开始玩游戏。<br>例如 cz5869.<br>系统会回复 *A*B.其中：<br>A:表示位置正确的数的个数<br>B:表示数字正确而位置不对的数的个</div></li>
+
+			   
+		<div class="clr"></div>
+ </ul>
+</fieldset>
+</div>
+<div id="tagContent4" class="tagContent  ">
+<fieldset>
+<ul class="changeapp">
+		 		<li><label> <input type="checkbox" value="9" onchange="changeapp(this,&#39;18946&#39;,&#39;9&#39;)" name="tid[]"> 淘宝卖家<a id="more_setting_9" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=9" class="btnGreens">配置</a></label><div>发送淘宝产品名称,返回推荐的产品！<br>(例如:淘宝女鞋)<span style="color:red;">[注:到设置页面上传cvs文件进行上传]</span></div></li>
+
+					<li><label> <input type="checkbox" value="44" onchange="changeapp(this,&#39;18946&#39;,&#39;44&#39;)" name="tid[]"> 抽奖大转盘<a id="more_setting_44" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=44" class="btnGreens">配置</a></label><div>开启此功能，直接发布幸运大转盘活动，设置活动内容、奖项及中将比例，带给粉丝完全不同的感受。</div></li>
+
+					<li><label> <input type="checkbox" value="45" onchange="changeapp(this,&#39;18946&#39;,&#39;45&#39;)" name="tid[]"> 刮刮卡活动<a id="more_setting_45" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=45" class="btnGreens">配置</a></label><div>刮刮卡活动，直接发布刮刮卡活动，设置活动内容、奖项及中将比例，带给粉丝完全不同的感受。</div></li>
+
+					<li><label> <input type="checkbox" value="46" onchange="changeapp(this,&#39;18946&#39;,&#39;46&#39;)" name="tid[]"> 优惠券活动<a id="more_setting_46" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=46" class="btnGreens">配置</a></label><div>优惠券活动，直接发布优惠券活动，设置活动内容、奖项带给粉丝完全不同的感受。</div></li>
+
+					<li><label> <input type="checkbox" value="48" onchange="changeapp(this,&#39;18946&#39;,&#39;48&#39;)" name="tid[]"> 团购活动<a id="more_setting_48" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=48" class="btnGreens">配置</a></label><div>团购活动</div></li>
+
+					<li><label> <input checked="checked" type="checkbox" value="49" onchange="changeapp(this,&#39;18946&#39;,&#39;49&#39;)" name="tid[]"> 会员卡<a id="more_setting_49" style=" position:absolute; right:10px; top:3px;float: right; display: block;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=49" class="btnGreens">配置</a></label><div>该功能，可以绑定会员，获取会员的基础信息！</div></li>
+
+					<li><label> <input type="checkbox" value="60" onchange="changeapp(this,&#39;18946&#39;,&#39;60&#39;)" name="tid[]"> 在线预订模块<a id="more_setting_60" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=60" class="btnGreens">配置</a></label><div>在线预订ktv,房间，餐桌</div></li>
+
+					<li><label> <input checked="checked" type="checkbox" value="58" onchange="changeapp(this,&#39;18946&#39;,&#39;58&#39;)" name="tid[]"> 投票模块<a id="more_setting_58" style=" position:absolute; right:10px; top:3px;float: right; display: block;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=58" class="btnGreens">配置</a></label><div>直接发送:投票  即可 参与投票活动</div></li>
+
+					<li><label> <input checked="checked" type="checkbox" value="59" onchange="changeapp(this,&#39;18946&#39;,&#39;59&#39;)" name="tid[]"> 微信留言板<a id="more_setting_59" style=" position:absolute; right:10px; top:3px;float: right; display: block;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=59" class="btnGreens">配置</a></label><div>微信留言板</div></li>
+
+					<li><label> <input checked="checked" type="checkbox" value="61" onchange="changeapp(this,&#39;18946&#39;,&#39;61&#39;)" name="tid[]"> 一战到底<a id="more_setting_61" style=" position:absolute; right:10px; top:3px;float: right; display: block;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=61" class="btnGreens">配置</a></label><div>直接发送 一战到底 参与活动</div></li>
+
+					<li><label> <input checked="checked" type="checkbox" value="64" onchange="changeapp(this,&#39;18946&#39;,&#39;64&#39;)" name="tid[]"> 微信图片墙<a id="more_setting_64" style=" position:absolute; right:10px; top:3px;float: right; display: block;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=64" class="btnGreens">配置</a></label><div>用户对着公众号发图片自动上墙！</div></li>
+
+					<li><label> <input type="checkbox" value="65" onchange="changeapp(this,&#39;18946&#39;,&#39;65&#39;)" name="tid[]"> 结婚喜帖<a id="more_setting_65" style=" position:absolute; right:10px; top:3px;float: right; display: none;" href="http://www.weixiaoxin.com/Socket/config?wid=18946&tid=65" class="btnGreens">配置</a></label><div>结婚喜帖，请输入【喜帖】调用</div></li>
+
+			   
+		<div class="clr"></div>
+ </ul>
+</fieldset>
+</div>
+<div id="tagContent5" class="tagContent  ">
+<fieldset>
+<ul class="changeapp">
+		 		<li><label> <input type="checkbox" disabled="true"> 超级淘宝店铺</label><div>发送：主页，可以查看淘宝店铺</div></li>
+
+			   
+		<div class="clr"></div>
+ </ul>
+</fieldset>
+</div>
+</div>	
+<script>
+ $(
+  function (){
+    $(".changeapp > li").hover(function(){
+	   $(this).addClass("z9999")	
+	  },function(){
+		  $(this).removeClass("z9999")	
+		  }
+	 ) 
+   }
+ )
+</script>
+  <script type="text/javascript">
+function selectTag(showContent,selfObj){
+// 操作标签
+var tag = document.getElementById("tags").getElementsByTagName("li");
+var taglength = tag.length;
+for(i=0; i<taglength; i++){
+tag[i].className = "";
+}
+selfObj.parentNode.className = "selectTag";
+// 操作内容
+for(i=1; j=document.getElementById("tagContent"+i); i++){
+j.style.display = "none";
+}
+document.getElementById(showContent).style.display = "block";
+
+
+}
+</script>
+        <div class="clr"></div>
+          </div>
+	
+		</div>
+                
+                </div>
+        </div>
+
+    </div>
+</div>
+<script>
+function changeapp(obj,wid,tid){
+	if(obj.checked==true){
+	 	var image=new Image();
+		image.src='/WxUser/minitoolsSave?ac=app&op=add&wid='+wid+'&tid='+tid+'&r='+Math.random();
+		$("#more_setting_"+tid).show(); 
+	}else{
+		var image=new Image();   
+		image.src='/WxUser/minitoolsSave?ac=app&op=del&wid='+wid+'&tid='+tid+'&r='+Math.random();
+		$("#more_setting_"+tid).hide(); 
+	}
+}
+</script>
+<div class="clear"></div>

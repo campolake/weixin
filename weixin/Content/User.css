@@ -1,0 +1,12 @@
+﻿.header .logo a {
+    background: url("http://www.weixiaoxin.com/Public/news/img/hlogo.png") no-repeat scroll 0 50% transparent;
+    float: left;
+    height: 80px;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 170px;
+	margin-top:8px;
+}
+#j-rollingnews .date {
+    margin-left: 10px;
+}

@@ -1,0 +1,625 @@
+﻿@{
+    ViewBag.Title = "Class";
+    Layout = "~/Views/Shared/_WxLayout.cshtml";
+}
+
+
+<div id="nav_sub">
+    <ul>
+        <li><a class="current" href="./WapClass_files/WapClass.htm">分类管理</a></li>
+        <li><a href="http://www.weixiaoxin.com/WxUser/manage?wid=18946"><em class="ic-5">.</em>文章管理</a></li>
+        <li><a href="http://www.weixiaoxin.com/WxSetting/focus?wid=18946">焦点图管理</a></li>
+        <li><a href="http://www.weixiaoxin.com/Style/manages?wid=18946">模板管理</a></li>
+        <li><a href="http://www.weixiaoxin.com/WxSetting/minihome?wid=18946">3G主页</a><span class="news_z"><img src="./WapClass_files/icon_new.gif"></span></li>
+        <li><a href="http://www.weixiaoxin.com/WxUser/comment/?wid=18946">评论管理</a></li>
+        <li><a href="http://www.weixiaoxin.com/Plugmenu/index/?wid=18946">一键导航</a></li>
+        <li><a href="http://www.weixiaoxin.com/AddMenu/info/?wid=18946">自定义菜单</a></li>
+        <li><a href="http://www.weixiaoxin.com/Erweima/index/?wid=18946">制作宣传页</a><span class="news_z"><img src="./WapClass_files/icon_new.gif"></span></li>
+
+        <li><a href="http://www.weixiaoxin.com/Comment/index/?wid=18946">留言板</a><span class="news_z"><img src="./WapClass_files/icon_new.gif"></span></li>
+        <li><a href="http://www.weixiaoxin.com/Baoming/index/?wid=18946">报名系统</a><span class="news_z"><img src="./WapClass_files/icon_new.gif"></span></li>
+        <li><a href="http://www.weixiaoxin.com/CopyrightClose/index?wid=18946">版权管理</a></li>
+
+    </ul>
+</div>
+<div class="clear"></div>
+<link href="./WapClass_files/style_2_common.css" rel="stylesheet" type="text/css">
+<link href="./WapClass_files/style.css" rel="stylesheet" type="text/css">
+<div class="clearfix main">
+    <div class="aside">
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".ajax").bind("click", function () {
+                return openDialog(this.href, refresh)
+            });
+        });
+</script>
+    <style>
+        .board {
+            background: url("/Public/wxapi/index/images/bg_repno.gif") no-repeat scroll 0 0 transparent;
+            padding-left: 55px;
+        }
+    </style>
+    <div class="content">
+        <div class="pwrap">
+            <div class="phead">
+                <h3 class="ptitle">分类管理</h3>
+            </div>
+            <div class="pbody">
+                <div class="pbox pbox-shaddow">
+                    <div class="cLineB">
+                        <h4><span class="FAQ">设置好分类，在图文编辑的时候就可以选择分类，系统会自动生成一个3G网站。</span></h4>
+                        <div class="searchbar right">
+                            <a style="" class="ajax right btnGreen" href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946" title="-添加分类">添加分类</a>
+                        </div>
+                    </div>
+                    <div class="msgWrap form">
+                        <form method="post" action="http://www.weixiaoxin.com/AutoReplay/add_news_cate/" enctype="multipart/form-data">
+                            <input type="hidden" name="type" value="">
+                            <input type="hidden" name="wid" value="18946">
+                            <div class="bdrcontent">
+                                <div id="div_ptype">
+                                    <table class="ListProduct" border="0" cellpadding="0" cellspacing="0" width="790px">
+                                        <thead>
+                                            <tr>
+                                                <th style="">分类名称</th>
+                                                <th style="">分类描述</th>
+                                                <th style="">顺序</th>
+                                                <th>分类图片<span style="color: red;">(宽720*高400)</span></th>
+                                                <th>外链网站或活动 </th>
+                                                <th>首页显示</th>
+                                                <th>获取地址</th>
+                                                <th>需要密码</th>
+                                                <th class="norightborder">操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="hover">
+                                                <td class="td25"><span>官方首页</span></td>
+                                                <td><span>点击进入淘宝店铺首页，可浏览更多的宝贝哦！</span></td>
+                                                <td><span>1</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525e5c583f99e.png">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525e5c583f99e.png">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://www.vekise.com</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27470&#39;);" checked="checked" value="1" name="ps[27470][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27470" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27470" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27470');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>精品潮衣</span></td>
+                                                <td><span></span></td>
+                                                <td><span>2</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525e5c6546ad1.png">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525e5c6546ad1.png">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&amp;cid=27390</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27609&#39;);" checked="checked" value="1" name="ps[27609][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27609" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27609" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27609');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>精品潮衣</span></td>
+                                                <td><span></span></td>
+                                                <td><span>2</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f68f685f62.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f68f685f62.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27390&#39;);" value="0" name="ps[27390][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27390" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27390" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27390');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>全部商品</span></div>
+                                                </td>
+                                                <td><span>进入手机淘宝列表页浏览所有宝贝吧！</span></td>
+                                                <td><span>7</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f7a5cba3b7.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f7a5cba3b7.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://shop37111000.m.taobao.com/</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27383&#39;);" value="0" name="ps[27383][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27390" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27383" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27383');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>潮流新品</span></div>
+                                                </td>
+                                                <td><span>以后的新品潮衣会优先在这里发布哦！</span></td>
+                                                <td><span>8</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f790b60368.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f790b60368.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/indexshow/?wid=18946&amp;cid=27385&amp;nid=79854</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27385&#39;);" value="0" name="ps[27385][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27390" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27385" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27385');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>人气爆款</span></div>
+                                                </td>
+                                                <td><span>这是大多数人都喜欢的宝贝哦，亲！</span></td>
+                                                <td><span>9</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f7815b044b.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f7815b044b.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/indexshow/?wid=18946&amp;cid=27467&amp;nid=80011</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27467&#39;);" value="0" name="ps[27467][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27390" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27467" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27467');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>活动专区</span></td>
+                                                <td><span></span></td>
+                                                <td><span>3</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525e5cc3e776d.png">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525e5cc3e776d.png">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&amp;cid=27387</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27610&#39;);" checked="checked" value="1" name="ps[27610][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27610" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27610" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27610');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>活动专区</span></td>
+                                                <td><span></span></td>
+                                                <td><span>3</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f6062b92c0.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f6062b92c0.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27387&#39;);" value="0" name="ps[27387][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27387" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27387" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27387');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>积分特权</span></div>
+                                                </td>
+                                                <td><span>亲，大三积分特权该让您爽歪歪了吧！</span></td>
+                                                <td><span>10</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f80e92bd89.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f80e92bd89.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/indexshow/?wid=18946&amp;cid=26978&amp;nid=77118</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27446&#39;);" value="0" name="ps[27446][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27387" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27446" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27446');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>投票活动</span></div>
+                                                </td>
+                                                <td><span>宝贝喜欢的人越多，优惠就越给力哦！</span></td>
+                                                <td><span>11</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f7db9e4a87.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f7db9e4a87.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/Vote/index/?wid=18946&amp;tid=823</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27469&#39;);" value="0" name="ps[27469][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27387" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27469" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27469');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>超值推荐</span></div>
+                                                </td>
+                                                <td><span>不光是要好 , 更关键要值 , 强烈推荐！</span></td>
+                                                <td><span>12</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f80f674833.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f80f674833.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/indexshow/?wid=18946&amp;cid=27387&amp;nid=80018</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27466&#39;);" value="0" name="ps[27466][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27387" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27466" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27466');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>会员中心</span></td>
+                                                <td><span></span></td>
+                                                <td><span>4</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525e5c97ec821.png">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525e5c97ec821.png">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&amp;cid=26978</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27519&#39;);" checked="checked" value="1" name="ps[27519][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27519" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27519" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27519');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>会员中心</span></td>
+                                                <td><span></span></td>
+                                                <td><span>4</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f57feaa3dc.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f57feaa3dc.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=26978&#39;);" value="0" name="ps[26978][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=26978" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=26978" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=26978');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>会员资料</span></div>
+                                                </td>
+                                                <td><span>亲 , 务必要完善个人资料哈 , 有积分奖励哦 !</span></td>
+                                                <td><span>13</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f9acd6af58.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f9acd6af58.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/Card/index/?wid=18946</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27447&#39;);" value="0" name="ps[27447][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=26978" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27447" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27447');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>查看物流</span></div>
+                                                </td>
+                                                <td><span>迫不及待了吧 , 亲 , 快查查它现在到哪了 !</span></td>
+                                                <td><span>14</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f86b7b4973.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f86b7b4973.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://h5.m.taobao.com/my/index.htm#!orderList-5/-Z1</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27448&#39;);" value="0" name="ps[27448][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=26978" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27448" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27448');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>留言寄语</span></div>
+                                                </td>
+                                                <td><span>亲 , 把您想说的,  想要的 , 悄悄告诉我们吧 !</span></td>
+                                                <td><span>15</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f87749777a.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f87749777a.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/Comment/?wid=18946</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27449&#39;);" value="0" name="ps[27449][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=26978" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27449" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27449');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>分享互动</span></td>
+                                                <td><span></span></td>
+                                                <td><span>5</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525e5ca9bc387.png">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525e5ca9bc387.png">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&amp;cid=27464</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27611&#39;);" checked="checked" value="1" name="ps[27611][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27611" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27611" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27611');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>分享互动</span></td>
+                                                <td><span></span></td>
+                                                <td><span>5</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f64b0022d5.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f64b0022d5.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27464&#39;);" value="0" name="ps[27464][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27464" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27464" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27464');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>待添加</span></div>
+                                                </td>
+                                                <td><span>正在策划中……</span></td>
+                                                <td><span>16</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f908de32e2.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f908de32e2.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27468&#39;);" value="0" name="ps[27468][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27464" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27468" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27468');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>亲亲群聊</span></div>
+                                                </td>
+                                                <td><span>亲，在这里可以和大家一起群聊哦！</span></td>
+                                                <td><span>17</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f90a27cea9.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f90a27cea9.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/Wall/index/?wid=18946&amp;tid=1725</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27465&#39;);" value="0" name="ps[27465][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27464" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27465" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27465');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>秀秀美图</span></div>
+                                                </td>
+                                                <td><span>亲 , 您发送的美照 , 会在这里显示哦！</span></td>
+                                                <td><span>18</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f8c9831e34.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f8c9831e34.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/Photowall/?wid=18946</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=26977&#39;);" value="0" name="ps[26977][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27464" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=26977" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=26977');">删除</a></td>
+                                            </tr>
+                                            <tr class="hover">
+                                                <td class="td25"><span>公告通知</span></td>
+                                                <td><span></span></td>
+                                                <td><span>6</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525e5cb6075a7.png">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525e5cb6075a7.png">
+                                                    </div>
+                                                </td>
+                                                <td><span>http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&amp;cid=27472</span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27471&#39;);" checked="checked" value="1" name="ps[27471][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27471" target="_blank">点击获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27471" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27471');">删除</a></td>
+                                            </tr>
+                                            <tr class="td29">
+                                                <td class="td25">
+                                                    <div class="board"><span>公告通知</span></div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td><span>19</span></td>
+                                                <td>
+                                                    <div class="cateimg">
+                                                        <img class="cateimg_small" style="border: 2px solid #579d0d; margin-right: 5px;" src="./WapClass_files/s_525f9ad814163.jpg">
+                                                        <img class="cateimg_big" style="border: 2px solid #579d0d;" src="./WapClass_files/s_525f9ad814163.jpg">
+                                                    </div>
+                                                </td>
+                                                <td><span></span></td>
+                                                <td>
+                                                    <input type="checkbox" onchange="up_confirm(&#39;/AutoReplay/up_cate?wid=18946&amp;id=27472&#39;);" value="0" name="ps[27472][is_show]" class="checkbox"></td>
+                                                <td><a href="http://wap.weixiaoxin.com/AllShow/catelistshow?wid=18946&cid=27471" target="_blank">获取地址</a></td>
+
+                                                <td><span>&nbsp;</span></td>
+                                                <td>
+                                                    <a class="ajax btnGreen " href="http://www.weixiaoxin.com/AutoReplay/add_news_cate_ex/?wid=18946&id=27472" title="-修改主菜单">修改</a>
+                                                    <a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '/AutoReplay/del_cate?type=&wid=18946&cid=27472');">删除</a></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </form>
+                        <script>
+                            function addrow(tbody) {
+                                var add = false;
+                                var newnode;
+                                if ($(tbody).rows.length == 1 && $(tbody).rows[0].style.display == 'none') {
+                                    $(tbody).rows[0].style.display = '';
+                                    newnode = $(tbody).rows[0];
+                                } else {
+                                    newnode = $(tbody).rows[0].cloneNode(true);
+                                    add = true;
+                                }
+                                if (add) {
+                                    $(tbody).appendChild(newnode);
+                                }
+                            }
+                            function delrow(obj, tbody) {
+                                if ($(tbody).rows.length == 1) {
+                                    var trobj = obj.parentNode.parentNode;
+                                    trobj.style.display = 'none';
+                                } else {
+                                    $(tbody).removeChild(obj.parentNode.parentNode);
+                                }
+                            }
+
+                            function drop_confirm(msg, url) {
+                                if (confirm(msg)) {
+                                    window.location = url;
+                                }
+                            }
+                            function up_confirm(url) {
+                                $.ajax({
+                                    url: url,
+                                    type: 'GET',
+                                    data: { inajax: 1 },
+                                    dataType: 'JSON',
+                                    success: function (data) {
+                                        if (data) {
+                                            alert(data);
+                                        }
+                                    }
+                                });
+                            }
+
+</script>
+                    </div>
+                </div>
+
+
+                <div class="pbox pbox-shaddow">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
